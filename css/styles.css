@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 body {
   color: #434455;
   font-family: 'Roboto', sans-serif;
@@ -24,14 +28,51 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-  width: 1158px;
-  padding-right: 15px;
-  padding-left: 15px;
+  /*Phone devices*/
+  min-width: 320px;
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-right: auto;
   margin-left: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+/* Tablet devices */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /*header content*/
@@ -153,7 +194,7 @@ address {
 /*section-1*/
 
 .hero {
-  display: flex;
+  /*display: flex;*/
   flex-direction: row;
   padding: 188px 0;
   border-bottom: 1px solid #e7e9fc;
@@ -169,7 +210,7 @@ address {
   background-size: contain;
   max-width: 1440px;
   background-size: cover;
-  margin: 0 auto;
+  margin: auto 0;
 }
 
 .hero .container {
@@ -221,30 +262,23 @@ address {
 }
 
 /*section-2*/
+/* Phone & Tablet devices*/
 .advantages {
   background: #fff;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
-.advantages-title {
-  display: flex;
-  visibility: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+/* Dekstop devices */
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding: 120px 0;
+  }
 }
 
 .advantages-list {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
 .advantages-list-item {
@@ -282,10 +316,19 @@ address {
 
 /*section-3*/
 .team-info {
+  /* Phone devices */
+  /*display: flex;*/
   background: #f4f4fd;
-  display: flex;
-  padding: 120px 0;
+  padding: 96px 0;
 }
+
+@media screen and (min-width: 1200px) {
+  .team-info {
+    /* Desktop devices */
+    padding: 120px 0;
+  }
+}
+
 .team-info-title {
   color: var(--NAVY-BLUE, #2e2f42);
   text-align: center;
@@ -296,11 +339,33 @@ address {
   line-height: 1.11;
   margin-bottom: 72px;
 }
+
+/*Phone devices*/
 .team-info-list {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
 }
+
+/* Tablet devices */
+@media screen and (min-width: 768px) {
+  .team-info-list {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 1200px) {
+  .team-info-list {
+    flex-wrap: wrap;
+  }
+}
+
 .team-card {
   display: inline-flex;
   padding-bottom: 32px;
@@ -375,9 +440,18 @@ address {
 }
 
 /*section-4*/
+
+/*Phone & Tablet devices*/
 .portfolio {
   background: #fff;
-  padding: 120px 0 120px 0;
+  padding: 96px 0 96px 0;
+}
+
+/* desktop devices */
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 120px 0 120px 0;
+  }
 }
 
 .portfolio-title {
@@ -391,16 +465,52 @@ address {
   margin-bottom: 72px;
 }
 
+/* Phone devices */
 .portfolio-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  justify-content: center;
+  gap: 48px;
 }
 
+/* Tablet devices */
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 1200px) {
+  .portfolio-list {
+    row-gap: 48px;
+  }
+}
+
+/* Phone devices */
 .project-card {
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tablet devices */
+@media screen and (min-width: 768px) {
+  .project-card {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-card {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 .project-card:hover {
@@ -775,7 +885,7 @@ address {
   line-height: 14px;
   letter-spacing: 0.48px;
 }
-.input-checkbox.visually-hidden {
+/*.input-checkbox.visually-hidden {
   display: flex;
   visibility: hidden;
   position: absolute;
@@ -788,7 +898,7 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+}*/
 
 .checkbox-label {
   font-size: 12px;
