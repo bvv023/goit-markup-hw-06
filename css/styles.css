@@ -804,6 +804,7 @@ address {
   pointer-events: initial;
 }
 
+/* Phone devsces */
 .modal {
   display: flex;
   flex-direction: column;
@@ -811,16 +812,32 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background: var(--DAIRY, #fcfcfc);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 }
+
+/* Tablet Fevices*/
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 25px 24px 23px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+
 .modal-btn {
   display: flex;
   position: absolute;
@@ -854,8 +871,10 @@ address {
 .modal-btn:focus .modal-btn-icon {
   fill: #ffffff;
 }
+
+/* Phone */
 .modal-text {
-  width: 360px;
+  width: 256px;
   color: var(--NAVY-BLUE, #2e2f42);
   text-align: center;
   font-size: 16px;
@@ -863,6 +882,13 @@ address {
   line-height: 24px;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
+}
+
+/* Tablet & Desktop Devices */
+@media only screen and (min-width: 768px) {
+  .modal-text {
+    width: 360px;
+  }
 }
 
 .modal-form {
@@ -948,20 +974,6 @@ address {
   line-height: 14px;
   letter-spacing: 0.48px;
 }
-/*.input-checkbox.visually-hidden {
-  display: flex;
-  visibility: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}*/
 
 .checkbox-label {
   font-size: 12px;
@@ -992,8 +1004,19 @@ address {
   fill: #f4f4fd;
 }
 
+/* Phone devices */
 .privacy-policy {
+  display: block;
   color: #4d5ae5;
+  margin-left: 20px;
+}
+
+/* Tablet & Desktop devices */
+@media screen and (min-width: 768px) {
+  .privacy-policy {
+    display: inline;
+    margin-left: 0;
+  }
 }
 
 .modal-btn-send {
