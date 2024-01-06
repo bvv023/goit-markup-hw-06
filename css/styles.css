@@ -67,7 +67,7 @@ img {
 }
 
 /* Desktop devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding-right: 15px;
@@ -270,7 +270,7 @@ address {
 }
 
 /* Dekstop devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages {
     padding: 120px 0;
   }
@@ -307,7 +307,7 @@ address {
 }
 
 /* Desktop devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages-list-item {
     width: calc((100% - 72px) / 4);
   }
@@ -319,7 +319,7 @@ address {
 }
 
 /* Dekctop devices*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages-list-item-icon {
     display: flex;
     align-items: center;
@@ -353,7 +353,7 @@ address {
 }
 
 /*Desktop Devices*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages-list-item-title {
     font-size: 20px;
     font-weight: 500;
@@ -372,7 +372,7 @@ address {
 }
 
 /* Desktop Devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages-list-item-text {
     font-weight: 400;
   }
@@ -387,7 +387,7 @@ address {
   padding: 96px 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .team-info {
     /* Desktop devices */
     padding: 120px 0;
@@ -424,13 +424,6 @@ address {
     row-gap: 64px;
   }
 }
-
-/* Desktop devices */
-/*@media screen and (min-width: 1200px) {
-  .team-info-list {
-    flex-wrap: wrap;
-  }
-}*/
 
 .team-card {
   display: inline-flex;
@@ -512,7 +505,7 @@ address {
 }
 
 /* desktop devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .portfolio {
     padding: 120px 0 120px 0;
   }
@@ -547,7 +540,7 @@ address {
 }
 
 /* Desktop devices */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .portfolio-list {
     row-gap: 48px;
   }
@@ -569,7 +562,7 @@ address {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .project-card {
     width: calc((100% - 48px) / 3);
   }
@@ -830,7 +823,7 @@ address {
     padding: 72px 25px 24px 23px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .modal {
     width: 408px;
     min-height: 584px;
