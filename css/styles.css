@@ -116,10 +116,23 @@ img {
   color: #2e2f42;
 }
 
+.menu-nav-burger-btn {
+  border-style: none;
+  background-color: #fff;
+}
+
 .menu-nav-list {
   display: flex;
   gap: 40px;
   margin: 0;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .menu-nav-list {
+    display: none;
+  }
+   {
+  }
 }
 
 .menu-nav-list-link {
@@ -171,6 +184,14 @@ address {
   display: flex;
   gap: 40px;
   margin: 0;
+}
+
+@media only screen and (max-width: 768.98px) {
+  .menu-nav-address-list {
+    display: none;
+  }
+   {
+  }
 }
 
 .menu-nav-address-list-item-link {
