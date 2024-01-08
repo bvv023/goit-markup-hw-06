@@ -18,3 +18,34 @@
 .mobile-menu-social-list-item-link:focus {
   background-color: #404bbf;
 }
+
+color: var(--WHITE, #fff);
+text-align: center;
+
+font-size: 36px;
+
+font-weight: 700;
+line-height: 40px;
+letter-spacing: 0.72px;
+text-transform: capitalize;
+
+color: var(--WHITE, #fff);
+text-align: center;
+/* Header 1 */
+font-family: Roboto;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 107.143% */
+letter-spacing: 1.12px;
+
+color: var(--WHITE, #fff);
+text-align: center;
+
+/* Header 1 */
+font-family: Roboto;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 107.143% */
+letter-spacing: 1.12px;

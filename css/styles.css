@@ -131,7 +131,7 @@ img {
   background-color: #fff;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu-nav-burger-btn {
     display: none;
   }
@@ -213,7 +213,7 @@ address {
   }
 }
 
-@media only screen and (min-width: 767.98px) and (max-width: 1157.98px) {
+@media screen and (min-width: 767.98px) and (max-width: 1157.98px) {
   .menu-nav-address-list {
     flex-direction: column;
     gap: 12px;
@@ -253,10 +253,10 @@ address {
 
 /*section-1*/
 
+/*Phone Devices*/
 .hero {
-  /*display: flex;*/
-  flex-direction: row;
-  padding: 188px 0;
+  display: flex;
+  padding: 72px 0;
   border-bottom: 1px solid #e7e9fc;
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -273,21 +273,63 @@ address {
   margin: auto 0;
 }
 
+@media only screen and (min-width: 1157.98px) {
+  .hero {
+    padding: 188px 0;
+    border-bottom: 1px solid #e7e9fc;
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 1440px;
+    background-size: cover;
+    margin: 0 auto;
+  }
+}
+
 .hero .container {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
 }
 
+/*Phone Devices*/
 .hero-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
-  max-width: 496px;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  max-width: 200px;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+/*Tablet Devices*/
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+    max-width: 496px;
+    text-transform: none;
+    margin-bottom: 36px;
+  }
+}
+
+/*Desktop Devices*/
+@media screen and (min-width: 1157.98px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 .hero-button {
@@ -685,10 +727,19 @@ address {
   background-color: #2e2f42;
   padding: 100px 0;
 }
+
 .footer-info-box {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
 }
+
+@media only screen and (min-width: 1157.98px) {
+  .footer-info-box {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .footer-info-box-logo {
   margin-right: 120px;
 }
@@ -925,7 +976,7 @@ address {
   fill: #ffffff;
 }
 
-/* Phone */
+/* Phone Devices */
 .modal-text {
   width: 256px;
   color: var(--NAVY-BLUE, #2e2f42);
@@ -1100,19 +1151,28 @@ address {
 
 /* Mobile menu */
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding-top: 72px;
   padding-right: 24px;
   padding-bottom: 40px;
   padding-left: 16px;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
 .mobile-menu-btn {
   position: absolute;
   top: 24px;
@@ -1147,18 +1207,20 @@ address {
 }
 
 .mobile-menu-list {
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 
-.mobile-menu-list-item {
+.mobile-menu-list-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+  text-decoration: none;
+  color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
-}
-.mobile-menu-link {
-  text-decoration: none;
-  color: #2e2f42;
 }
 
 .mobile-menu-link.corrent {
@@ -1166,19 +1228,24 @@ address {
 }
 
 .mobile-menu-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
   margin-bottom: 48px;
 }
 
-.mobile-menu-contacts-item {
-  text-decoration: none;
+.mobile-menu-contacts-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mobile-menu-contacts-item-link {
   color: #434455;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
+  text-decoration: none;
+}
+
+.mobile-menu-contacts-item-link.accent {
+  color: #4d5ae5;
 }
 
 .mobile-menu-social-list {
